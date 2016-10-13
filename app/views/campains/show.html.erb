@@ -1,0 +1,23 @@
+<div class="page-header">
+  <%= link_to campains_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_campain_path(@campain), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show campain</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Title:</dt>
+  <dd><%= @campain.title %></dd>
+
+  <dt>Description:</dt>
+  <dd><%= @campain.description %></dd>
+
+  <dt>Cover:</dt>
+  <dd><%= image_tag @campain.cover.url(:thumb) %></dd>
+
+</dl>
